@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include stylesheet %}
+        <style>
+            .padded{
+                padding: 2% 2%;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="appbar">
+            Login
+        </div>
+        <form action="/login/" method="POST">
+            <table>
+                {{ form.as_table }}
+                {% csrf_token %}
+                <tr>
+                    <td class="center-text" colspan="2">
+                        <input class="submitbtn" type="submit" value="LOGIN">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <table>
+            <tr>
+                <td>
+                    Other options:
+                </td>
+            </tr>
+            <tr>
+                <td class="center-text">
+                    <form action="/signup/" method="POST">
+                        {% csrf_token %}
+                        <input class="padded submitbtn" type="submit" value="Register">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

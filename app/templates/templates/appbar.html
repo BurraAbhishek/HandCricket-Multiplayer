@@ -1,0 +1,14 @@
+<div class="appbar">
+    <span class="appbar-title">Hand Cricket</span>
+    <span class="appbar-nav">PLAY</span>
+    
+    <span class="right-float">
+        <form action="{{ signin_action }}" method="POST">
+            {% csrf_token %}
+            <input type="submit" class="appbar-nav" value="{{ signin }}">
+        </form>
+    </span>
+    <span class="appbar-settings right-float">
+        <img src="data:image/png;base64,{{ settingsicon }}" alt="Settings" class="settings_icon">
+    </span>
+</div>

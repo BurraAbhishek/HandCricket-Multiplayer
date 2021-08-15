@@ -1,0 +1,27 @@
+Anonymous = {
+                "_id": "Computer",
+                "team_name": "Computer",
+                "team_members": [
+                    "CPU1",
+                    "CPU2",
+                    "CPU3",
+                    "CPU4",
+                    "CPU5",
+                    "CPU6",
+                    "CPU7",
+                    "CPU8",
+                    "CPU9",
+                    "CPU10",
+                    "CPU11",
+                ],
+                "games_played": 0,
+                "games_won": 0,
+                "games_lost": 0,
+                "tests_tied": 0,
+                "team_key": "",
+                "online": True,
+                "hasSuperOver": False,
+                "disabled": False,
+                "tosViolation": False,
+                "isHuman": False
+            }

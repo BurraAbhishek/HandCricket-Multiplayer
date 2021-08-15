@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include stylesheet %}
+    <style>
+        p1 {
+            padding: 1% 1%;
+        }
+
+        .flexbar {
+            width: 99%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5% 0.5%;
+            flex-grow: 1;
+        }
+
+        .flex-links-icon {
+            max-height: 16vh;
+            max-width: 16vw;
+            height: auto;
+        }
+
+        .flex-links-title {
+            padding: 1% 2%;
+            font-size: 1.25em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .flex-links-description {
+            text-align: center;
+            padding: 1% 1%;
+            font-size: 1em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .text-padded {
+            padding: 0.5% 0.5%;
+        }
+
+        .leftalign {
+            text-align: left
+        }
+
+        .dangertext {
+            color: red;
+        }
+
+        input {
+            margin: 1% 1%;
+            padding: 0.5% 0.5%;
+            font-size: 1.15em;
+            color: red;
+        }
+
+        .submitbtn {
+            width: auto;
+        }
+
+        .closeaccountbtn {
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    {% include appbar %}
+    <div class="flex-links">
+        <div class="flex-links">
+            <div class="flex-links-icon">
+                <img src="data:image/png;base64,{{ warningicon }}" alt="Settings">
+            </div>
+            <div class="flex-links-title dangertext">
+                Close Team
+            </div>
+        </div>
+    </div>
+    <form action="/account/closepermanently/" method="POST">
+        <div class="flex-links">
+            <div class="flex-links-description leftalign">
+                Are you sure you want to close your team?
+                Closing your team is a permanent decision.
+                You will NEVER be able to log in EVER AGAIN.
+                <br>
+                <br>
+                You will not be allowed to create a new team with the same name,
+                even if the case is different.
+                <br>
+                <br>
+                {{ form }}
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <a href="/" class="flex-links submitbtn">
+                        I changed my mind, don't close my team
+                    </a>
+                </td>
+                <td>
+
+                    {% csrf_token %}
+                    <input type="submit" class="submitbtn closeaccountbtn" value="CLOSE TEAM">
+
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+Anonymous = {
+                "_id": "Anonymous",
+                "team_name": "Anonymous",
+                "team_members": [
+                    "Anonymous_1",
+                    "Anonymous_2",
+                    "Anonymous_3",
+                    "Anonymous_4",
+                    "Anonymous_5",
+                    "Anonymous_6",
+                    "Anonymous_7",
+                    "Anonymous_8",
+                    "Anonymous_9",
+                    "Anonymous_10",
+                    "Anonymous_11",
+                ],
+                "games_played": 0,
+                "games_won": 0,
+                "games_lost": 0,
+                "tests_tied": 0,
+                "team_key": "",
+                "online": True,
+                "hasSuperOver": False,
+                "disabled": False,
+                "tosViolation": False,
+                "isHuman": True
+            }

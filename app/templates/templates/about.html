@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include stylesheet %}
+        <style>
+            .text-padded {
+                font-size: 1.2em;
+                padding: 0.5% 0.5%;
+            }
+
+            a {
+                color: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        {% include appbar %}
+        <h1>About this site</h1>
+        <div class="text-padded">
+            This site is a free, adless, open-source hand cricket server, powered by volunteers.
+            <br>
+            <br>
+            There are several servers for board games, but making one for a team game is not easy. 
+            In addition to that, there are several online sports games which you can play, but most 
+            of them serve advertisements, or contain hidden trackers and paywalls.
+            <br>
+            <br>
+            Cricket is an outdoor sport. During the COVID-19 pandemic, several safety measures were 
+            implemented by governments. People were not allowed to play in groups to protect themselves 
+            from the deadly SARS-CoV-2 virus. Thus, many resorted to playing online.
+            <br>
+            <br>
+            Online cricket is not as effective as outdoor cricket. Thus, to make things simpler, this site 
+            hosts a much simpler mode of playing cricket. Despite being hand cricket, the 
+            <a href="https://www.lords.org/mcc/the-laws-of-cricket">Laws of Cricket</a> 
+            which can be implemented in online settings are fully supported.
+            <br>
+            <br>
+            The initial idea was to fork the <a href="https://github.com/ornicar/lila">source code</a> of  
+            <a href="https://lichess.org">Lichess</a>, the most popular free and open-source online chess 
+            server. However, we soon came to realize that major rewriting was needed, since analysis, 
+            learning and puzzles were not a part of this hand cricket website.
+            <br>
+            <br>
+            The logic of the game is already available on 
+            <a href="https://github.com/BurraAbhishek/Python-Hand-Cricket">GitHub</a>. 
+            This site will use the same logic, since 
+            that is also open-source. For this reason, this site is written using Django instead of the 
+            Play Framework as was earlier planned.
+            <br>
+            <br>
+            Nevertheless, this site will be forever free and open-source without any advertisements or 
+            trackers. Major pieces of layout and text were copied from Lichess, although the UI differs 
+            in color and dimensions. So a big word of thanks to Thibault Duplessis for his brilliant piece 
+            of work <a href="https://lichess.org">lichess.org</a>, the other lichess 
+            <a href="https://github.com/ornicar/lila/graphs/contributors">developers</a> and the 
+            open-source community in general.
+            <br>
+            <br>
+            This site is still in its early stages of development; there are going to be bugs and missing 
+            features, but we are trying to improve the site as much as we can. The source code is 
+            available on <a href="https://github.com/BurraAbhishek/HandCricket-Multiplayer">GitHub</a>. 
+        </div>
+    </body>
+</html>
