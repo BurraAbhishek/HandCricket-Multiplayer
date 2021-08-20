@@ -19,8 +19,8 @@ from modules.lobby import views as lobby_views
 from modules.login import views as login_views
 from modules.login import logout as logout_user
 from modules.profileview import views as profile_views
-from modules.profileview import closeaccount, reopen
-from modules.docs import about
+from modules.profileview import closeaccount, reopen, edit
+from modules.docs import about, license
 
 urlpatterns = [
     path('', lobby_views.lobby_view, name='lobby_view'),
@@ -32,6 +32,9 @@ urlpatterns = [
     path('account/closepermanently/', closeaccount.close, name='close'),
     path('account/reopen/', reopen.open, name='open'),
     path('profile/', profile_views.profile_view, name='profile_view'),
+    path('editteam/edit/', edit.form_view, name="form_view"),
+    path('editteam/update/', edit.update, name="update"),
     # Documentation
     path('about/', about.open, name='open'),
+    path('license/', license.open, name='open'),
 ]
