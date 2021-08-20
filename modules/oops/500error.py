@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from modules.css.choose import getTheme
 from modules.css.iconset import mark_icon
 
-def response_500(request, exception):
+def response_500(request):
     data = {"name": "test"}
     return render(
         request,
