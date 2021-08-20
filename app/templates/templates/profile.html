@@ -47,21 +47,36 @@
         .text-padded {
             padding: 0.5% 0.5%;
         }
+
+        .submitbtn {
+            width: auto;
+            margin: 1% 1%;
+        }
+
+        input {
+            font-size: 1em
+        }
     </style>
 </head>
 
 <body>
     {% include appbar %}
-    <a class="flex-links" href="/">
+    <div class="flex-links">
         <div class="flexbar">
             <div class="flex-links-title">
                 Edit profile
             </div>
             <div class="flex-links-description">
-                Select this option to edit your team and its profile.
+                You need to enter your password to edit your team profile
+                <form action="/editteam/edit/" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <br>
+                    <input type="submit" class="submitbtn" value="EDIT TEAM">
+                </form>
             </div>
         </div>
-    </a>
+    </div>
     <a class="flex-links" href="/logout/">
         <div class="flexbar">
             <div class="flex-links-title">
