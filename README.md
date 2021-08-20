@@ -21,4 +21,10 @@ Use `localhost:8000` to open this website.
 
 ## License
 
-HandCricket-Multiplayer is licensed under the GNU Affero General Public License 3 or any later version at your choice.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
