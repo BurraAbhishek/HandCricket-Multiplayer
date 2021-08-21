@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include stylesheet %}
+    </head>
+    <body>
+        {% include appbar %}
+        <form action="{{ setup_location }}" method="POST">
+            {% csrf_token %}
+            <table id="game_setup_table">                
+                {{ form.as_table }}
+                <tr>
+                    <td class="center-text" colspan="2">
+                        <input class="submitbtn" type="submit" value="PLAY">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form action="/" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <input class="submitbtn" type="submit" value="Cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function toggleFormat() {
+                if(document.getElementById('id_gametype').value == "True") {
+                    document.getElementById('id_overs').setAttribute("aria-hidden", "true");
+                    document.getElementById('game_setup_table').getElementsByTagName("tr")[2].style.display = "none";
+                    document.getElementById('id_days').removeAttribute("aria-hidden");
+                    document.getElementById('game_setup_table').getElementsByTagName("tr")[3].style.display = "";
+                } else {
+                    document.getElementById('id_overs').removeAttribute("aria-hidden");
+                    document.getElementById('game_setup_table').getElementsByTagName("tr")[2].style.display = "";
+                    document.getElementById('id_days').setAttribute("aria-hidden", "true");
+                    document.getElementById('game_setup_table').getElementsByTagName("tr")[3].style.display = "none";
+                }
+            }
+            toggleFormat();
+        </script>
+    </body>
+</html>

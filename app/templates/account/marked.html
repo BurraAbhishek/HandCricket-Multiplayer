@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include stylesheet %}
+    <style>
+        p1 {
+            padding: 1% 1%;
+        }
+
+        .flexbar {
+            width: 99%;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5% 0.5%;
+            flex-grow: 1;
+        }
+
+        .flex-links-icon {
+            max-height: 16vh;
+            max-width: 16vw;
+            height: auto;
+        }
+
+        .flex-links-title {
+            padding: 1% 1%;
+            font-size: 2em;
+        }
+
+        .flex-links-description {
+            padding: 2% 2%;
+            font-size: 1.25em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .text-padded {
+            padding: 1% 1%;
+            font-size: 1.25em;
+        }
+
+        .submitbtn {
+            width: auto;
+            margin: 1% 1%;
+        }
+
+        input {
+            font-size: 1em
+        }
+
+        .violated_appbar {
+            border: 1px solid #F0C2C2;
+            border-radius: 3px;
+            background-color: #FAEBEB;
+            color: #CC3333;
+            padding: 0.7em;
+            margin: 1% 1%;
+            display: flex;
+        }
+
+        .violated_icon {
+            height: 10vh;
+            width: auto;
+            margin: 0.5% 1%;
+            display: inline-block
+        }
+
+        .violated_text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1em;
+            padding: 0 1%;
+            font-weight: 300;
+        }
+
+        li {
+            padding-top: 0%;
+            padding-bottom: 1.5%;
+        }
+    </style>
+</head>
+
+<body>
+    {% include appbar %}
+    <div class="flex-links">
+        <div class="flexbar">
+            <div class="flex-links-title">
+                {{ teamname }}
+            </div>
+        </div>
+    </div>
+    <h1 class="appbar violated_appbar">
+        <img src="data:image/png;base64,{{ notice_icon }}" alt="" class="violated_icon">
+        <span class="violated_text">This account violated the Terms of Service</span>
+    </h1>
+    {% include stats %}
+</body>
+
+</html>

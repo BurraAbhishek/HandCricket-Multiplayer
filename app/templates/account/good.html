@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include stylesheet %}
+    <style>
+        p1 {
+            padding: 1% 1%;
+        }
+
+        .flexbar {
+            width: 99%;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5% 0.5%;
+            flex-grow: 1;
+        }
+
+        .flex-links-icon {
+            max-height: 16vh;
+            max-width: 16vw;
+            height: auto;
+        }
+
+        .flex-links-title {
+            padding: 2% 2%;
+            font-size: 2em;
+        }
+
+        .flex-links-description {
+            padding: 2% 2%;
+            font-size: 1.25em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .text-padded {
+            padding: 0.5% 0.5%;
+        }
+
+        .submitbtn {
+            width: auto;
+            margin: 1% 1%;
+        }
+
+        input {
+            font-size: 1em
+        }
+    </style>
+</head>
+
+<body>
+    {% include appbar %}
+    <div class="flex-links">
+        <div class="flexbar">
+            <div class="flex-links-title">
+                {{ teamname }}
+            </div>
+        </div>
+    </div>
+    {% include stats %}
+</body>
+
+</html>
