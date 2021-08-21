@@ -20,7 +20,9 @@ from modules.login import views as login_views
 from modules.login import logout as logout_user
 from modules.profileview import views as profile_views
 from modules.profileview import closeaccount, reopen, edit
+from modules.account import views as account_views
 from modules.docs import about, license
+from modules.game.new import setup_ai
 
 urlpatterns = [
     path('', lobby_views.lobby_view, name='lobby_view'),
@@ -37,4 +39,9 @@ urlpatterns = [
     # Documentation
     path('about/', about.open, name='open'),
     path('license/', license.open, name='open'),
+    # Team
+    path('@/<str:teamname>/', account_views.profile_view, name="profile_view"),
+    # Game setup
+    path('setup/ai/play/', setup_ai.setup_ai, name="setup_ai"),
+    path('setup/ai/', setup_ai.initial, name="initial")
 ]
